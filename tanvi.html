@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+  font-family: Arial;
+  color: black;
+ 
+}
+
+.am {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: lightgreen;
+}
+
+.right {
+  right: 0;
+  background-color: lightgrey;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+</style>
+<script>  
+ $(document).ready(function(){
+    $("#a").click(function(){
+        $("#s").toggle();
+    });
+});
+</script>  
+</head>
+<body>
+
+<div class="am left">
+  <div class="centered">
+    <h1><button>Good Morning</button></h1>
+	<br>
+	<br>
+	<button id= "color">Click Here</button>
+  </div>
+</div>
+
+<div class="am right">
+  <div class="centered">
+    <button>How are you</button>
+	<br>
+	<br>
+	 <button id="s">I m fine</button>
+	<br>
+	<br>
+	<button id="a">Click Here</button>
+  </div>
+</div>
+   <script>
+document.getElementById('color').onclick = changeColor; 
+var currentColor = "red";
+
+function changeColor() { 
+        if(currentColor == "red"){ 
+           document.body.style.color = "green";
+           currentColor = "green";
+        }
+
+        else if(currentColor == "green") {
+           document.body.style.color = "blue";
+           currentColor = "blue";
+        }
+
+        else if(currentColor == "blue") {
+           document.body.style.color = "orange";
+           currentColor = "orange";
+        }
+
+         else if(currentColor == "orange") {
+           document.body.style.color = "grey";
+           currentColor = "grey";
+        }
+
+         else if(currentColor == "grey") {
+           document.body.style.color = "purple";
+           currentColor = "purple";
+        }
+
+      
+		
+		else {
+           document.body.style.color = "red";
+           currentColor = "red";
+        } 
+    }
+</script>  
+</body>
+</html> 
